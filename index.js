@@ -6,7 +6,7 @@ const server = express();
 const bot = new TelegramBot (TOKEN, {
     polling: true
 });
-const port = process.env.PORT || 5000;
+const port = 5000;
 const games = {
     ticTacToe: "TelegramGames",
     sapper: "sapper"
