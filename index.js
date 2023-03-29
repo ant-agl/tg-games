@@ -55,7 +55,7 @@ const start = () => {
     if (text === "/start") {
       return bot.sendMessage(
         chatId,
-        `Добрый день, ${msg.from.first_name} ${msg.from.last_name}. Меня зовут TelegaGameBot, давай поиграем 🎮`
+        `Добрый день, ${msg.from.first_name} ${msg.from.last_name}. Меня зовут TelegaGameBot, давай поиграем 🎮 /play`
       );
     }
 
