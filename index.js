@@ -11,8 +11,13 @@ const games = [
     link: "https://ant-agl.github.io/other/tic-tac-toe/",
   },
   {
-    id: "sapper",
+    id: "Ya1",
     name: "Hunter Assassin",
+    link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya2",
+    name: "Добавить игру",
     link: "https://yandex.ru/games/app/168142",
   },
   //   {
