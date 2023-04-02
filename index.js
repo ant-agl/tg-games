@@ -18,7 +18,47 @@ const games = [
   {
     id: "Ya2",
     name: "Добавить игру",
-    link: "https://yandex.ru/games/app/168142",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya3",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya4",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya5",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya6",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya7",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya8",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya9",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
+  },
+  {
+    id: "Ya10",
+    name: "Добавить игру",
+  // link: "https://yandex.ru/games/app/168142",
   },
   //   {
   //     id: "sapper",
