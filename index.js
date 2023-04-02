@@ -88,10 +88,6 @@ const start = () => {
     const chatId = msg.chat.id;
 
     if (text === "/start") {
-      bot.send_sticker(
-        chatId,
-        "CAACAgIAAxkBAAEIbfxkKcRZW8WNBj5D4T3pqNUKxuSL-QACnywAAsm2UUlNG7jdAAG11vwvBA"
-      );
       return bot.sendMessage(
         chatId,
         `Добрый день, ${msg.from.first_name} ${msg.from.last_name}. Меня зовут TelegaGameBot, давай поиграем 🎮 /play`
@@ -99,6 +95,10 @@ const start = () => {
     }
 
     if (text === "/play") {
+      bot.send_sticker(
+        chatId,
+        "CAACAgIAAxkBAAEIbfxkKcRZW8WNBj5D4T3pqNUKxuSL-QACnywAAsm2UUlNG7jdAAG11vwvBA"
+      );
       return bot.sendMessage(
         chatId,
         "Выберите игру, в которую хотели бы поиграть:",
