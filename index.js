@@ -88,6 +88,10 @@ const start = () => {
     const chatId = msg.chat.id;
 
     if (text === "/start") {
+      await bot.sendSticker(
+        chatId,
+        "CAACAgIAAxkBAAEIblFkKcyn4jjZxGEm7cKsQZ2GrDc_tAACKgMAAs-71A4f8rUYf2WfMC8E"
+      );
       return bot.sendMessage(
         chatId,
         `Добрый день, ${msg.from.first_name} ${msg.from.last_name}. Меня зовут TelegaGameBot, давай поиграем 🎮 /play`
