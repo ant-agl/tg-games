@@ -97,7 +97,7 @@ const start = () => {
     if (text === "/play") {
       await bot.sendSticker(
         chatId,
-        "CAACAgIAAxkBAAEIbfxkKcRZW8WNBj5D4T3pqNUKxuSL"
+        "CAACAgIAAxkBAAEIbidkKchahQUVQYlrnT_JUoJBdGlAhgACPAADwDZPE9eVZhJ0WTE5LwQ"
       );
       return bot.sendMessage(
         chatId,
