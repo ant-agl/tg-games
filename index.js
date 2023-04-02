@@ -90,7 +90,7 @@ const start = () => {
     if (text === "/start") {
       await bot.sendSticker(
         chatId,
-        "CAACAgIAAxkBAAEIblFkKcyn4jjZxGEm7cKsQZ2GrDc_tAACKgMAAs-71A4f8rUYf2WfMC8E"
+        "CAACAgIAAxkBAAEIbl9kKc6SZRAB0E8PshHCo1SlQM24ZAACdgsAAi8P8AbH0wunOwbMXi8E"
       );
       return bot.sendMessage(
         chatId,
@@ -101,7 +101,7 @@ const start = () => {
     if (text === "/play") {
       await bot.sendSticker(
         chatId,
-        "CAACAgIAAxkBAAEIbfxkKcRZW8WNBj5D4T3pqNUKxuSL-QACnywAAsm2UUlNG7jdAAG11vwvBA"
+        "CAACAgIAAxkBAAEIbmFkKc6_Ob806ZD3qlQ1UI7XWaHpAwACZwsAAi8P8AZEB7odlreLly8E"
       );
       return bot.sendMessage(
         chatId,
