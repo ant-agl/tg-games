@@ -89,7 +89,7 @@ const start = () => {
 
     if (text === "/start") {
       bot.send_sticker(
-        message.chat.id,
+        chatId,
         "CAACAgIAAxkBAAEIbfxkKcRZW8WNBj5D4T3pqNUKxuSL-QACnywAAsm2UUlNG7jdAAG11vwvBA"
       );
       return bot.sendMessage(
