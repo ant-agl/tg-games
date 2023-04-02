@@ -6,20 +6,55 @@ const bot = new TelegramApi(TOKEN, { polling: true });
 
 const games = [
   {
-    id: "TelegramGames",
-    name: "Крестики-Нолики",
-    link: "https://ant-agl.github.io/other/tic-tac-toe/",
-  },
-  {
-    id: "sapper",
+    id: "Ya1",
     name: "Hunter Assassin",
     link: "https://yandex.ru/games/app/168142",
   },
-  //   {
-  //     id: "sapper",
-  //     name: "Саппёр",
-  //     link: "https://ant-agl.github.io/other/sapper/",
-  //   },
+  {
+    id: "Ya2",
+    name: "Шахматы",
+    link: "https://yandex.ru/games/app/165384",
+  },
+  {
+    id: "Ya3",
+    name: "Cut the Rope2",
+    link: "https://yandex.ru/games/app/151508",
+  },
+  {
+    id: "Ya4",
+    name: "Park My Car!",
+    link: "https://yandex.ru/games/app/219246",
+  },
+  {
+    id: "Ya5",
+    name: "Морской Бой классический",
+    link: "https://yandex.ru/games/app/214025",
+  },
+  {
+    id: "Ya6",
+    name: "Сапёр Мания",
+    link: "https://yandex.ru/games/app/102170",
+  },
+  {
+    id: "Ya7",
+    name: "Битва за территории",
+    link: "https://yandex.ru/games/app/191972",
+  },
+  {
+    id: "Ya8",
+    name: "Paint.io",
+    link: "https://yandex.ru/games/app/186214",
+  },
+  {
+    id: "Ya9",
+    name: "Mini Shooters",
+    link: "https://yandex.ru/games/app/178620",
+  },
+  {
+    id: "Ya10",
+    name: "FIFA World Cup 2022",
+    link: "https://yandex.ru/games/app/200667",
+  },
 ];
 
 let inline_keyboard = [];
