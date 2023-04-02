@@ -95,7 +95,7 @@ const start = () => {
     }
 
     if (text === "/play") {
-      bot.sendSticker(chatId, "QACnywAAsm2UUlNG7jdAAG11vwvBA");
+      return bot.sendSticker(chatId, "QACnywAAsm2UUlNG7jdAAG11vwvBA");
       return bot.sendMessage(
         chatId,
         "Выберите игру, в которую хотели бы поиграть:",
