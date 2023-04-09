@@ -96,10 +96,10 @@ const start = () => {
     const chatId = query.message.chat.id;
 
     let gameId = games.find((game) => {
-      return game.id == id;
+      return game.game_id == id;
     })?.id;
     let gameurl = games.find((game) => {
-      return game.id == query?.game_short_name;
+      return game.game_id == query?.game_short_name;
     })?.link;
 
     if (gameurl) {
