@@ -70,6 +70,10 @@ const start = () => {
     const chatId = msg.chat.id;
 
     if (text === "/start") {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=setUser&id=${msg.chat.id}&name=${msg.from.first_name + ' ' + msg.from.last_name}`);
+      xhr.send();
+
       await bot.sendSticker(chatId, getRandomStickers(stickersHi));
       return bot.sendMessage(
         chatId,
@@ -108,6 +112,10 @@ const start = () => {
         url: gameurl,
       });
     } else {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=updateCount&id=${msg.chat.id}&game=${gameId}`);
+      xhr.send();
+
       bot.sendGame(chatId, gameId);
     }
   });
