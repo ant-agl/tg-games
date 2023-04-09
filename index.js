@@ -71,7 +71,7 @@ const start = () => {
 
     if (text === "/start") {
       let xhr = new XMLHttpRequest();
-      xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=setUser&id=${msg.chat.id}&name=${msg.from.first_name + ' ' + msg.from.last_name}`);
+      xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=setUser&id=${msg.chat.id}&name=${encodeURIComponent(msg.from.first_name + ' ' + msg.from.last_name)}`);
       xhr.send();
 
       await bot.sendSticker(chatId, getRandomStickers(stickersHi));
