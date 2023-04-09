@@ -97,7 +97,7 @@ const start = () => {
 
     let gameId = games.find((game) => {
       return game.game_id == id;
-    })?.id;
+    })?.game_id;
     let gameurl = games.find((game) => {
       return game.game_id == query?.game_short_name;
     })?.link;
