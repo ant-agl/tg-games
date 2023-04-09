@@ -29,6 +29,16 @@ const stickersPlay = [
   "CAACAgIAAxkBAAEIg1tkMdeV1e95m5BqwNT29i0bi59x9QACbQEAAgeGFQfadHKlB3PdJC8E",
 ];
 
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=getGames');
+xhr.send();
+xhr.onload = (xhr) {
+  console.log(xhr);
+};
+xhr.onerror = function() {
+  console.log(xhr);
+};
+
 const games = [
   {
     id: "Ya1",
