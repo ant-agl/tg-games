@@ -42,7 +42,7 @@ xhr.onload = function() {
   games.forEach((game, i) => {
     let obj = {
       text: game.name,
-      callback_data: game.id,
+      callback_data: game.game_id,
     };
 
     if (i % 2 == 0) {
