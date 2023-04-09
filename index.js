@@ -31,32 +31,32 @@ const stickersPlay = [
 ];
 
 let games = [];
+let gameOptions = {}
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=getGames');
 xhr.send();
 xhr.onload = function() {
   games = JSON.parse(xhr.response);
-};
 
+  let inline_keyboard = [];
+  games.forEach((game, i) => {
+    let obj = {
+      text: game.name,
+      callback_data: game.id,
+    };
 
-let inline_keyboard = [];
-games.forEach((game, i) => {
-  let obj = {
-    text: game.name,
-    callback_data: game.id,
+    if (i % 2 == 0) {
+      inline_keyboard.push([obj]);
+    } else {
+      inline_keyboard[Math.floor(i / 2)].push(obj);
+    }
+  });
+
+  gameOptions = {
+    reply_markup: JSON.stringify({
+      inline_keyboard: inline_keyboard,
+    }),
   };
-
-  if (i % 2 == 0) {
-    inline_keyboard.push([obj]);
-  } else {
-    inline_keyboard[Math.floor(i / 2)].push(obj);
-  }
-});
-
-const gameOptions = {
-  reply_markup: JSON.stringify({
-    inline_keyboard: inline_keyboard,
-  }),
 };
 
 const start = () => {
