@@ -1,3 +1,4 @@
+const XMLHttpRequest = require('xhr2');
 const TelegramApi = require("node-telegram-bot-api");
 
 const TOKEN = "5704264589:AAERgeP1DoZWvVqX4LGnKk2gput_gOnQfAU";
