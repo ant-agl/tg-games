@@ -4,7 +4,7 @@ const TOKEN = "5704264589:AAERgeP1DoZWvVqX4LGnKk2gput_gOnQfAU";
 
 const bot = new TelegramApi(TOKEN, { polling: true });
 
-const stickersHy = [
+const stickersHi = [
   "CAACAgIAAxkBAAEIbl9kKc6SZRAB0E8PshHCo1SlQM24ZAACdgsAAi8P8AbH0wunOwbMXi8E",
   "CAACAgIAAxkBAAEIgzRkMdVuQdfLHoxP7EEF1a0xrP3ErgACOAMAAs-71A43zgaKKQqPbS8E",
   "CAACAgIAAxkBAAEIgzZkMdV9jGJR5CNr07UajoKgEYnaBgACSgMAAs-71A5eHOsvbWT29y8E",
@@ -113,7 +113,7 @@ const start = () => {
     const chatId = msg.chat.id;
 
     if (text === "/start") {
-      await bot.sendSticker(chatId, getRandomStickers(stickersHy));
+      await bot.sendSticker(chatId, getRandomStickers(stickersHi));
       return bot.sendMessage(
         chatId,
         `Добрый день, ${msg.from.first_name} ${msg.from.last_name}. Меня зовут TelegaGameBot, давай поиграем 🎮 /play`
@@ -159,6 +159,6 @@ const start = () => {
 start();
 
 function getRandomStickers(stickers) {
-  let randIndex = Math.floor(Math.random() * stickers.length + 1);
+  let randIndex = Math.floor(Math.random() * stickers.length);
   return stickers[randIndex];
 }
