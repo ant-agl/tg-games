@@ -32,7 +32,7 @@ const stickersPlay = [
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=getGames');
 xhr.send();
-xhr.onload = (xhr) {
+xhr.onload = function() {
   console.log(xhr);
 };
 xhr.onerror = function() {
