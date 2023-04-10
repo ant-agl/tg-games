@@ -98,19 +98,20 @@ const start = () => {
       xhr.send();
       xhr.onload = function() {
         stats = JSON.parse(xhr.response);
-        console.log(stats);
         let statsArr = [];
         for (let id in stats) {
+          let name = games.find(game => {
+            return game.game_id == id;
+          })?.name;
           statsArr.push({
             id,
-            name: stats[id].name,
+            name,
             count: stats[id].count
           });
         }
         statsArr.sort((a, b) => {
           return a.count < b.count;
         });
-        console.log(statsArr);
         let text = '';
         statsArr.forEach((game, i) => {
           text += `${i+1}. ${game.name} — ${game.count} раз\r\n`;
