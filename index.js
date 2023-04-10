@@ -112,6 +112,7 @@ const start = () => {
         statsArr.sort((a, b) => {
           return a.count < b.count;
         });
+        console.log(statsArr);
         let text = '';
         statsArr.forEach((game, i) => {
           text += `${i+1}. ${game.name} — ${game.count} раз\r\n`;
