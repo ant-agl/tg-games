@@ -109,7 +109,7 @@ const start = () => {
             count: stats[id]
           });
         }
-        statsArr = statsArr.sort((a, b) => {
+        statsArr.sort((a, b) => {
           return a.count < b.count;
         });
         let text = '';
