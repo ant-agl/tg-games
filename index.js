@@ -110,6 +110,9 @@ const start = () => {
       let xhr = new XMLHttpRequest();
       xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=updateCount&id=${chatId}&game=${gameId}`);
       xhr.send();
+      xhr.onload = () => {
+        console.log(xhr.response);
+      }
 
       bot.answerCallbackQuery({
         callback_query_id: query.id,
