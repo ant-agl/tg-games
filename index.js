@@ -109,12 +109,11 @@ const start = () => {
             count: stats[id]
           });
         }
-        console.log(statsArr);
         statsArr.sort((a, b) => {
-          console.log(a, b);
-          return a.count < b.count;
+          if (a.count < b.count) return 1;
+          if (a.count > b.count) return -1;
+          return 0;
         });
-        console.log(statsArr);
         let text = '';
         statsArr.forEach((game, i) => {
           text += `${i+1}. ${game.name} — ${game.count} раз\r\n`;
