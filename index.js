@@ -100,7 +100,7 @@ const start = () => {
     const chatId = query.message.chat.id;
 
     let gameId = games.find((game) => {
-      return game.game_id == id;
+      return game.game_id == query?.game_short_name;
     })?.game_id;
     let gameurl = games.find((game) => {
       return game.game_id == query?.game_short_name;
@@ -116,7 +116,7 @@ const start = () => {
         url: gameurl,
       });
     } else {
-      bot.sendGame(chatId, gameId);
+      bot.sendGame(chatId, id);
     }
   });
 };
