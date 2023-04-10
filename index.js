@@ -106,7 +106,7 @@ const start = () => {
           statsArr.push({
             id,
             name,
-            count: stats[id].count
+            count: stats[id]
           });
         }
         statsArr.sort((a, b) => {
