@@ -94,7 +94,7 @@ const start = () => {
     if (text === "/popular") {
       let stats = [];
       let xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=getGames');
+      xhr.open('GET', 'http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=getCount');
       xhr.send();
       xhr.onload = function() {
         stats = JSON.parse(xhr.response);
@@ -117,7 +117,8 @@ const start = () => {
         });
         bot.sendMessage(
           chatId,
-          "**Самые популярные игры:**\r\n\r\n" + text
+          "*Самые популярные игры:*\r\n\r\n" + text,
+          { parse_mode: 'markdown' }
         );
       };
 
