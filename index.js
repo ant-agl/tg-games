@@ -109,8 +109,8 @@ const start = () => {
             count: stats[id]
           });
         }
-        statsArr.sort((a, b) => {
-          return a.count > b.count;
+        statsArr = statsArr.sort((a, b) => {
+          return a.count < b.count;
         });
         let text = '';
         statsArr.forEach((game, i) => {
