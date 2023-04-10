@@ -63,6 +63,7 @@ const start = () => {
   bot.setMyCommands([
     { command: "/start", description: "Начальное приветствие" },
     { command: "/play", description: "Начать играть" },
+    { command: "/popular", description: "Популярные игры" },
   ]);
 
   bot.on("message", async (msg) => {
@@ -89,6 +90,38 @@ const start = () => {
         gameOptions
       );
     }
+
+    if (text === "/popular") {
+      let stats = [];
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=getGames');
+      xhr.send();
+      xhr.onload = function() {
+        stats = JSON.parse(xhr.response);
+        let statsArr = [];
+        for (let id in stats) {
+          statsArr.push({
+            id,
+            name: stats[id].name,
+            count: stats[id].count
+          });
+        }
+        statsArr.sort((a, b) => {
+          return a.count < b.count;
+        });
+
+        let text = '';
+        statsArr.forEach((game, i) => {
+          text += `${i+1}. ${game.name} — ${game.count} раз\r\n`;
+        });
+        bot.sendMessage(
+          chatId,
+          "Самые популярные игры:\r\n" + text
+        );
+      };
+
+      return;
+    }
     return bot.sendMessage(
       chatId,
       `Вы ввели неизвестный запрос, выберите задачу из приведённых в списке`
@@ -110,9 +143,6 @@ const start = () => {
       let xhr = new XMLHttpRequest();
       xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=updateCount&id=${chatId}&game=${gameId}`);
       xhr.send();
-      xhr.onload = () => {
-        console.log(xhr.response);
-      }
 
       bot.answerCallbackQuery({
         callback_query_id: query.id,
