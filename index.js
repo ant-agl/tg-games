@@ -107,15 +107,15 @@ const start = () => {
     })?.link;
 
     if (gameurl) {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=updateCount&id=${chatId}&game=${gameId}`);
+      xhr.send();
+
       bot.answerCallbackQuery({
         callback_query_id: query.id,
         url: gameurl,
       });
     } else {
-      let xhr = new XMLHttpRequest();
-      xhr.open('GET', `http://ovz1.j33354020.vpljm.vps.myjino.ru/db.php?func=updateCount&id=${msg.chat.id}&game=${gameId}`);
-      xhr.send();
-
       bot.sendGame(chatId, gameId);
     }
   });
