@@ -110,7 +110,7 @@ const start = () => {
           });
         }
         statsArr.sort((a, b) => {
-          return a.count < b.count;
+          return a.count > b.count;
         });
         let text = '';
         statsArr.forEach((game, i) => {
