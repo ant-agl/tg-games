@@ -98,6 +98,7 @@ const start = () => {
       xhr.send();
       xhr.onload = function() {
         stats = JSON.parse(xhr.response);
+        console.log(stats);
         let statsArr = [];
         for (let id in stats) {
           statsArr.push({
@@ -109,14 +110,14 @@ const start = () => {
         statsArr.sort((a, b) => {
           return a.count < b.count;
         });
-
+        console.log(statsArr);
         let text = '';
         statsArr.forEach((game, i) => {
           text += `${i+1}. ${game.name} — ${game.count} раз\r\n`;
         });
         bot.sendMessage(
           chatId,
-          "Самые популярные игры:\r\n" + text
+          "**Самые популярные игры:**\r\n\r\n" + text
         );
       };
 
